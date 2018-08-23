@@ -9,6 +9,7 @@ import java.util.List;
 
 /**
  * Created by lining on 2018/8/23.
+ * -XX:PermSize=10M -XX:MaxPermSize=10M
  */
 public class PermGenByCgLib {
     static class Dummy{
@@ -23,8 +24,8 @@ public class PermGenByCgLib {
 
     public static void main(String[] args) {
         Dummy dummy = getEnhancedObject(Dummy.class);
-        dummy.get(10);
-//        permGenSpaceError();
+//        dummy.get(10);
+        permGenSpaceError();
         System.out.println("over");
     }
 
