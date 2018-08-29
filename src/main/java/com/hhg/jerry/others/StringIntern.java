@@ -47,5 +47,11 @@ public class StringIntern {
         String s6 = "cd";
         System.out.println(s5 == s6);
         System.out.println(s5.intern() == s6);
+
+        String s7 = String.valueOf(333);
+        s7.intern();
+        String s8 = "333";
+        System.out.println(s7 == s8);
+        System.out.println(s7.intern() == s7);
     }
 }
